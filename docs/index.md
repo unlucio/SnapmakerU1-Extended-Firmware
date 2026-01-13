@@ -60,6 +60,7 @@ Heavily expanded firmware with extensive features and customization:
 - [AFC-Lite Stub](afc-lite.md) - Experimental AFC UI compatibility layer for Fluidd/Mainsail
 - [RFID Filament Tag Support](rfid_support.md) - NTAG213/215/216 support for OpenSpool format
 - [Alternative Filament Detection](rfid_support.md#alternative-detection-systems) - Alternative detection implementations with extended spool/tag support from Bambu, Creality, Anycubic, and others
+- [Spoolman](spoolman.md) - automatic spools tracking and configuration
 
 **Monitoring & Notifications:**
 
@@ -71,22 +72,7 @@ Heavily expanded firmware with extensive features and customization:
 - [VPN Remote Access](vpn.md) - Secure remote access via Tailscale
 - [Cloud Remote Access](cloud.md) - Cloud-based remote access service for 3D printers
 
+
 ## Support
 
 See [Heroes](https://github.com/paxx12/SnapmakerU1/blob/main/HEROES.md) for contributors who made significant contributions to each release.
-
-If you find this project useful and would like to support its development, you can:
-
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/paxx12)
-
-🖨️ **Buy a Snapmaker Printer from Official Store** - use referral link and discount code `PAXX12` to get 5% discount on any purchase
-
-  * EU store: [https://snapmaker-eu.myshopify.com?ref=paxx12](https://snapmaker-eu.myshopify.com?ref=paxx12)
-  * US store: [https://snapmaker-us.myshopify.com?ref=paxx12](https://snapmaker-us.myshopify.com?ref=paxx12)
-  * Global store: [https://test-snapmaker.myshopify.com?ref=paxx12](https://test-snapmaker.myshopify.com?ref=paxx12)
-
-🖨️ **Buy a Snapmaker Printer from Official Store** - use discount code `PAXX12CUSTOM` to get $20 off Snapmaker U1 printer
-
-  * EU store: [https://snapmaker-eu.myshopify.com?ref=paxx12](https://snapmaker-eu.myshopify.com?ref=paxx12)
-  * US store: [https://snapmaker-us.myshopify.com?ref=paxx12](https://snapmaker-us.myshopify.com?ref=paxx12)
-  * Global store: [https://test-snapmaker.myshopify.com?ref=paxx12](https://test-snapmaker.myshopify.com?ref=paxx12)
