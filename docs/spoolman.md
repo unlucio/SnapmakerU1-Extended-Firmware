@@ -15,6 +15,7 @@ This is not backwards compatible with the manual spoolman config, while the macr
 ## Features
 
 This is like your regular Spoolman for multi tools, with a bit of automation sprinkled in.
+<<<<<<< HEAD
 
 - Detects and configures RFID-tagged spools. Untagged spools will still need to have their filament manually selected.
 - Set Active spools when a tool is picked.
@@ -131,6 +132,8 @@ Additionaly `Spoolman Helper` provides the following commands:
 ## Features
 
 This is like your regulat Spoolman for multi tools, with a bit of automation sprinkled in
+=======
+>>>>>>> ae8537e (Update docs/spoolman.md)
 
 - Detects and configures RFID tagged spools, utagged spools wil still need to have their filament manually selected
 - Set Active spools when a tool is picked
