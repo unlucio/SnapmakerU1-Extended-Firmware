@@ -78,6 +78,7 @@ Heavily expanded firmware with extensive features and customization. Includes al
 
 - [Monitoring](monitoring.md) - Integration with Prometheus, Home Assistant, DataDog, and other monitoring systems
 - Moonraker Apprise Notifications - Send print notifications to Discord, Telegram, Slack, and 90+ services
+- [Spoolman](spoolman.md) - Automatic spools tracking and configuration
 
 **Remote Access:**
 
