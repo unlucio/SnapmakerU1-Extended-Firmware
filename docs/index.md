@@ -66,12 +66,14 @@ Heavily expanded firmware with extensive features and customization:
 
 - [Monitoring](monitoring.md) - Integration with Prometheus, Home Assistant, DataDog, and other monitoring systems
 - Moonraker Apprise Notifications - Send print notifications to Discord, Telegram, Slack, and 90+ services
+- [Timelapse Recovery Tool](https://github.com/horzadome/snapmaker-u1-timelapse-recovery) - Recover unplayable timelapse videos
 
 **Remote Access:**
 
 - [VPN Remote Access](vpn.md) - Secure remote access via Tailscale
 - [Cloud Remote Access](cloud.md) - Cloud-based remote access service for 3D printers
 
+- [Timelapse Recovery Tool](https://github.com/horzadome/snapmaker-u1-timelapse-recovery) - Recover unplayable timelapse videos
 
 ## Support
 
