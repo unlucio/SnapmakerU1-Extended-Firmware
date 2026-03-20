@@ -49,6 +49,9 @@ Toggle settings directly from the web interface:
 | Remote Screen | Enabled, Disabled | Enable remote screen access |
 | Klipper Metrics Exporter | Enabled, Disabled | Enable Prometheus metrics |
 | VPN Provider | None, Tailscale | Enable VPN remote access (Experimental) |
+| Cloud | None, OctoEverywhere | Enable Cloud-based remote access (Experimental) |
+| Tweaks | TMC AutoTune, TMC Reduced Current, Object Processing, AFC Stub | Experimental Klipper tweaks ([tweaks](tweaks.md)) |
+| RFID Detection System | External, Snapmaker, OpenRFID, OpenRFID (force generic vendor) | Set how filament is detected ([rfid_support](rfid_support.md)) |
 
 Changes are applied immediately and relevant services are restarted.
 
@@ -148,6 +151,16 @@ Note: Remote screen requires additional Moonraker configuration. See [Remote Scr
 **logs** - Camera service logging destination
 - `syslog` - Enable logging to `/var/log/messages`
 
+#### [components]
+
+**rfid** - Filament tag detection system
+- `snapmaker` (default) - Snapmaker's built-in RFID reader
+- `external` - Disable built-in readers (useful for external readers)
+- `openrfid` - Alternative detection with extended spool/tag support
+- `openrfid-generic` - Same as openrfid, labels all spool vendors as generic
+
+See [Alternative Filament Detection](rfid_support.md#alternative-detection-systems) for setup instructions.
+
 #### [remote_access]
 
 **ssh** - Enable SSH remote access via dropbear
@@ -159,6 +172,12 @@ Note: Remote screen requires additional Moonraker configuration. See [Remote Scr
 - `tailscale` - Connect to your Tailnet via [Tailscale](https://tailscale.com)
 
 See [VPN Remote Access](vpn.md) for setup instructions.
+
+**cloud**
+- `none` (default) - No cloud providers enabled.
+- `octoeverywhere` - [OctoEverywhere.com](https://octoeverywhere.com) remote access
+
+See the [3D Printing Clouds](cloud.md) for setup instructions.
 
 #### [monitoring]
 
@@ -188,12 +207,20 @@ usb: none
 # Enable RTSP streaming server: true, false
 rtsp: false
 
+[components]
+# Filament tag detection system: external, snapmaker, openrfid, openrfid-generic
+rfid: snapmaker
+
 [remote_access]
 # Enable SSH access: true, false
 ssh: false
 # VPN provider for remote access: none, tailscale
 # Must SSH and run "tailscale up" to complete login flow
 vpn: none
+# Cloud: none, octoeverywhere
+# - none - No cloud services enabled.
+# - octoeverywhere - OctoEverywhere.com remote access
+cloud: none
 
 [monitoring]
 # Enable Klipper Prometheus exporter on specified address
