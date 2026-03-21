@@ -46,7 +46,7 @@ add_string() {
 echo ">> Replacing logo.bmp in boot image"
 for i in "$UNPACK_DIR/resources/"*.bmp; do
   # align with the gui spinner
-  add_string "$i" "w/2-text_w/2" "h*220/320-ascent/2" 16 white "$PROFILE_STR"
+  add_string "$i" "w/2-text_w/2" "h*220/320-ascent/2" 16 white "L $PROFILE_STR"
 
   # align bottom left
   add_string "$i" "w-text_w-10" "h-ascent-10" 12 white "$VERSION_STR"
