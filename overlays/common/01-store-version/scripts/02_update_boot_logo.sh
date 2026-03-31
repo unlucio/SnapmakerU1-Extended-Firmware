@@ -32,7 +32,7 @@ add_string() {
   local x="$2"
   local y="$3"
   local fs="$4"
-  local fc="$5"
+  local fc="$5" 
   shift 5
   local text="${*//:/\\:}"
   ffmpeg -y -i "$f" \
@@ -46,12 +46,26 @@ add_string() {
 echo ">> Replacing logo.bmp in boot image"
 for i in "$UNPACK_DIR/resources/"*.bmp; do
   # align with the gui spinner
-  add_string "$i" "w/2-text_w/2" "h*220/320-ascent/2" 16 white "L $PROFILE_STR"
+  #add_string "$i" "w/2-text_w/2" "h*220/320-ascent/2" 16 white "Spoolman $PROFILE_STR"
 
-  # align bottom left
-  add_string "$i" "w-text_w-10" "h-ascent-10" 12 white "$VERSION_STR"
+  # Define the starting point based on your centering logic
+  X_START="w/2-text_w/2-80"
+  Y_POS="h*220/320-ascent/2"
+
+  add_string "$i" "$X_START"      "$Y_POS" 16 cyan      "S"
+  add_string "$i" "$X_START+10"   "$Y_POS" 16 magenta   "p"
+  add_string "$i" "$X_START+20"   "$Y_POS" 16 yellow    "o"
+  add_string "$i" "$X_START+30"   "$Y_POS" 16 gray      "o"
+  add_string "$i" "$X_START+40"   "$Y_POS" 16 white     "l"
+  add_string "$i" "$X_START+49"   "$Y_POS" 16 red       "m"
+  add_string "$i" "$X_START+61"   "$Y_POS" 16 0x0FF284  "a"
+  add_string "$i" "$X_START+71"   "$Y_POS" 16 0x0F39F2  "n"
+  add_string "$i" "$X_START+130"   "$Y_POS" 16 white    " $PROFILE_STR"
 
   # align bottom right
+  add_string "$i" "w-text_w-10" "h-ascent-10" 12 white "Spoolman-$VERSION_STR"
+
+  # align bottom left
   add_string "$i" "10" "h-ascent-10" 12 white "$BUILD_DATE_STR"
 done
 
