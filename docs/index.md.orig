@@ -102,3 +102,48 @@ If you find this project useful and would like to support its development, you c
 - EU store: [https://snapmaker-eu.myshopify.com?ref=paxx12](https://snapmaker-eu.myshopify.com?ref=paxx12)
 - US store: [https://snapmaker-us.myshopify.com?ref=paxx12](https://snapmaker-us.myshopify.com?ref=paxx12)
 - Global store: [https://test-snapmaker.myshopify.com?ref=paxx12](https://test-snapmaker.myshopify.com?ref=paxx12)
+## Features
+
+Heavily expanded firmware with extensive features and customization:
+
+**Web & Configuration:**
+
+- [Firmware Configuration](firmware_config.md) - Customize firmware behavior via web interface or config file
+- [Fluidd or Mainsail](firmware_config.md#web) (selectable) - Choose your preferred web interface
+
+**Camera & Media:**
+
+- [Camera Support](camera_support.md) - Hardware-accelerated camera stack with WebRTC streaming for internal and USB cameras
+- [Remote Screen](remote_screen.md) - View and control printer screen remotely via web browser
+- Timelapse Support - Record print timelapses with automatic cleanup
+- [Timelapse Recovery Tool](https://github.com/horzadome/snapmaker-u1-timelapse-recovery) - Recover unplayable timelapse videos
+
+**Klipper Customization:**
+
+- [Klipper and Moonraker Custom Includes](klipper_includes.md) - Add custom configuration files via Fluidd/Mainsail
+- [Klipper Tweaks](tweaks.md) - Experimental [TMC driver optimizations](tweaks.md#tmc-autotune), [reduced current](tweaks.md#tmc-reduced-current), and [object processing for adaptive mesh](tweaks.md#object-processing-for-adaptive-mesh)
+- [AFC-Lite Stub](afc-lite.md) - Experimental AFC UI compatibility layer for Fluidd/Mainsail
+- [RFID Filament Tag Support](rfid_support.md) - NTAG213/215/216 support for OpenSpool format
+- [Alternative Filament Detection](rfid_support.md#alternative-detection-systems) - Alternative detection implementations with extended spool/tag support from Bambu, Creality, Anycubic, and others
+- [Spoolman](spoolman.md) - automatic spools tracking and configuration
+
+**Monitoring & Notifications:**
+
+- [Monitoring](monitoring.md) - Integration with Prometheus, Home Assistant, DataDog, and other monitoring systems
+- Moonraker Apprise Notifications - Send print notifications to Discord, Telegram, Slack, and 90+ services
+<<<<<<< HEAD
+- [Timelapse Recovery Tool](https://github.com/horzadome/snapmaker-u1-timelapse-recovery) - Recover unplayable timelapse videos
+=======
+- [Spoolman](spoolman.md) - Automatic spools tracking and configuration
+>>>>>>> 563d620 (Update docs/index.md)
+
+**Remote Access:**
+
+- [VPN Remote Access](vpn.md) - Secure remote access via Tailscale
+- [Cloud Remote Access](cloud.md) - Cloud-based remote access service for 3D printers
+
+- [Timelapse Recovery Tool](https://github.com/horzadome/snapmaker-u1-timelapse-recovery) - Recover unplayable timelapse videos
+
+## Support
+
+See [Heroes](https://github.com/paxx12/SnapmakerU1/blob/main/HEROES.md) for contributors who made significant contributions to each release.
