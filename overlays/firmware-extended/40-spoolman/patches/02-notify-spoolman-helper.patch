@@ -1,5 +1,5 @@
---- rootfs.original/home/lava/klipper/klippy/extras/filament_detect.py	2026-03-21 00:46:48
-+++ rootfs/home/lava/klipper/klippy/extras/filament_detect.py	2026-03-21 01:02:19
+--- rootfs.original/home/lava/klipper/klippy/extras/filament_detect.py	2026-03-31 11:43:53
++++ rootfs/home/lava/klipper/klippy/extras/filament_detect.py	2026-03-31 11:09:30
 @@ -54,7 +54,14 @@
  
          self.webhooks = self.printer.lookup_object('webhooks')
@@ -26,9 +26,9 @@
  
      def register_cb_2_update_filament_info(self, cb):
          try:
-@@ -175,6 +186,10 @@
-             self._fm175xx_reader.request_clear_card_info(channel)
+@@ -176,6 +187,10 @@
          else:
+             self._state[channel] = FILAMENT_DT_STATE_IDLE
              self._filament_info_update(channel, copy.deepcopy(filament_protocol.FILAMENT_INFO_STRUCT), True)
 +        
 +        spoolman = self.getSpoolman()
